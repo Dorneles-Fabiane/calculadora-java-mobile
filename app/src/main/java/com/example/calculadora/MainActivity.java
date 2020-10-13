@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickIgual (View v) {
-        if (operacao.equals("x") & sN1.equals("0") || sN2.equals("0")) {
+        if (operacao.equals("x") & sN2.equals("0")) {
             display.setText("Operação inválida. Impossível multiplicar por '0'.");
             return;
         } else if (operacao.isEmpty()) {
