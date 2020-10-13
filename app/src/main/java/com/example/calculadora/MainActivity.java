@@ -96,29 +96,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickIgual (View v) {
-        if (operacao.equals("x") & sN2.equals("0")) {
-            display.setText("Operação inválida. Impossível multiplicar por '0'.");
+        if (operacao.equals("/") & sN2.equals("0")) {
+            display.setText("Operação inválida. Impossível dividir por '0'.");
             return;
         } else if (operacao.isEmpty()) {
             display.setText("Por favor, selecione uma operação.");
             return;
-        }
+        } else {
+            int n1 = Integer.parseInt(sN1);
+            int n2 = Integer.parseInt(sN2);
 
-        int n1 = Integer.parseInt(sN1);
-        int n2 = Integer.parseInt(sN2);
-
-        if (operacao.equals("+")) {
-            resultado = n1 + n2;
-            display.setText(String.valueOf(resultado));
-        } else if (operacao.equals("-")) {
-            resultado = n1- n2;
-            display.setText(String.valueOf(resultado));
-        } else if (operacao.equals("x")) {
-            resultado = n1 * n2;
-            display.setText(String.valueOf(resultado));
-        } else if (operacao.equals("/")) {
-            resultado = n1 / n2;
-            display.setText(String.valueOf(resultado));
+            if (operacao.equals("+")) {
+                resultado = n1 + n2;
+                display.setText(String.valueOf(resultado));
+            } else if (operacao.equals("-")) {
+                resultado = n1- n2;
+                display.setText(String.valueOf(resultado));
+            } else if (operacao.equals("x")) {
+                resultado = n1 * n2;
+                display.setText(String.valueOf(resultado));
+            } else if (operacao.equals("/")) {
+                resultado = n1 / n2;
+                display.setText(String.valueOf(resultado));
+            }
         }
     }
 
